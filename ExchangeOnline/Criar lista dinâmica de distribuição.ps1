@@ -1,0 +1,3 @@
+﻿$Filter = "((City -eq 'Rio de Janeiro') -and (-not(RecipientTypeDetailsValue -eq 'RoomMailbox')) -and (RecipientType -eq 'UserMailbox') -and (RecipientTypeDetails -ne 'GuestMailUser') -and (ExchangeUserAccountControl -ne 'AccountDisabled'))"
+
+New-DynamicDistributionGroup -Name "Eletronuclear - SEDE" -DisplayName "Eletronuclear - SEDE" -Alias Eletronuclear-SEDE -PrimarySmtpAddress Eletronuclear-SEDE@eletrobrastermonuclear.onmicrosoft.com -RecipientFilter $Filter
