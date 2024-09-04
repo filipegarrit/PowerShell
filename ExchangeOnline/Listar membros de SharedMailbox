@@ -1,0 +1,5 @@
+Clear-Host
+
+Connect-ExchangeOnline
+
+Get-Mailbox -Filter {recipienttypedetails -eq 'SharedMailbox'} -Identity 'mailbox'|Get-MailboxPermission | Export-Excel  'C:\archive.xlsx'-AutoSize
