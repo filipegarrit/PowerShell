@@ -21,3 +21,5 @@ Foreach ($computer in $computers){
   Invoke-Command -ComputerName $computer -ScriptBlock {(&cmd.exe /c MSIEXEC /I "C:\TEMP\software.msi" /qn) , (Remove-Item -Path "C:\Temp\software.msi" -ErrorAction Ignore)}  
 
 }
+
+#Baseado no vídeo https://www.youtube.com/watch?v=E9yaYVbzgb4
