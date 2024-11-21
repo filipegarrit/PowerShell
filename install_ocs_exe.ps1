@@ -21,3 +21,5 @@ Foreach ($computer in $computers){
   Invoke-Command -ComputerName $computer -ScriptBlock {(&cmd.exe /c "C:\TEMP\OCS-Windows-Agent-Setup-x64.exe" /S /DEBUG /NOW /proxy=proxy_address 192.168.10.18 /proxy_port=port 3128) , (Remove-Item -Path "C:\Temp\OCS-Windows-Agent-Setup-x64.exe" -ErrorAction Ignore)}  
 
 }
+
+#Baseado no vídeo https://www.youtube.com/watch?v=E9yaYVbzgb4
